@@ -6,7 +6,9 @@ class App extends Component {
     super();
     this.state = {
       count: 0,
+      count2: 0,
     };
+    console.log(this.state.count2);
   }
   //************************************** */
   handleClickForPlus = (e) => {
@@ -18,12 +20,19 @@ class App extends Component {
       let dynamiqueNumberMinus = this.state.count - 1;
       this.setState({ count: dynamiqueNumberMinus });
     }
+
+    handleCounters = (e) => {};
   };
 
   render() {
     return (
       <div>
         <h1>Counter</h1>
+        <Counter
+          count={this.state.count}
+          increment={this.handleClickForPlus}
+          decrement={this.handleClickForMinus}
+        />
         <Counter
           count={this.state.count}
           increment={this.handleClickForPlus}
