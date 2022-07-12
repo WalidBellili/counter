@@ -14,8 +14,10 @@ class App extends Component {
     this.setState({ count: dynamiqueNumberPlus });
   };
   handleClickForMinus = (e) => {
-    let dynamiqueNumberMinus = this.state.count - 1;
-    this.setState({ count: dynamiqueNumberMinus });
+    if (this.state.count > 0) {
+      let dynamiqueNumberMinus = this.state.count - 1;
+      this.setState({ count: dynamiqueNumberMinus });
+    }
   };
 
   render() {

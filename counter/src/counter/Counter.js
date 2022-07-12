@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   render() {
-    // console.log(this);
     return (
       <div>
         <button onClick={this.props.decrement}>-</button>
