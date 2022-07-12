@@ -22,7 +22,11 @@ class App extends Component {
     return (
       <div>
         <h1>Counter</h1>
-        <Counter />
+        <Counter
+          count={this.state.count}
+          increment={this.handleClickForPlus}
+          decrement={this.handleClickForMinus}
+        />
       </div>
     );
   }
